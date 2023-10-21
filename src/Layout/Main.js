@@ -5,7 +5,7 @@ import Header from "../Components/Header";
 
 const Main = () => {
   return (
-    <div>
+    <div className="container mx-auto px-5">
       <Header></Header>
       <Outlet></Outlet>
       <Footer></Footer>

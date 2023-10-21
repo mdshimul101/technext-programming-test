@@ -1,9 +1,10 @@
 import React from "react";
+import Filter from "./Filter";
 
 const Header = () => {
   return (
     <>
-      <div className=" my-16 mx-5 md:mx-0 text-left md:text-center space-y-4">
+      <div className=" my-16  text-left md:text-center space-y-4">
         <h1 className="text-[#212529] text-4xl font-medium leading-10">
           Spaceflight details
         </h1>
@@ -11,6 +12,7 @@ const Header = () => {
           Find out the elaborate features of all the past big spaceflights.
         </p>
       </div>
+      <Filter></Filter>
     </>
   );
 };
