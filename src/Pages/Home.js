@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../Components/Card";
 
 const Home = () => {
