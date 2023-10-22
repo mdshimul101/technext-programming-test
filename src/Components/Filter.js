@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import { filterContext } from "../contexts/data";
 
 const Filter = () => {
+  const { setFilterData } = useContext(filterContext);
   const [filterStatus, setFilterStatus] = useState({
     lnuchStatus: "All",
     lunchData: "All",
@@ -15,7 +17,7 @@ const Filter = () => {
   const handleStatusChange = (event) => {
     if (event.target.value) {
       setUpcoming(!upcoming);
-      console.log("if,", upcoming);
+
       setFilterStatus({ ...filterStatus, upcomingStatus: upcoming });
     }
   };
@@ -24,15 +26,13 @@ const Filter = () => {
 
     if (status === "Success") {
       setLunch(true);
-      console.log(event.target.value);
-      console.log("if lunch success,", lunch);
+
       setFilterStatus({ ...filterStatus, lnuchStatus: true });
       //   console.log(filterStatus);
     }
     if (status === "Failed") {
       setLunch(false);
-      console.log(event.target.value);
-      console.log("if lunch fail,", lunch);
+
       setFilterStatus({ ...filterStatus, lnuchStatus: false });
       //   console.log(filterStatus);
     }
@@ -69,6 +69,7 @@ const Filter = () => {
     console.log(searchData);
     setFilterStatus({ ...filterStatus, search: event.target.value });
   };
+  setFilterData(filterStatus);
   console.log(filterStatus);
   return (
     <div className="space-y-4">
