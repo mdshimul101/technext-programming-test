@@ -22,7 +22,7 @@ const Card = ({ item }) => {
       <h3 className="text-[#212529] text-2xl font-medium mb-1">
         {mission_name}
       </h3>
-      <p>{item.flight_number}</p>
+
       <p className="text-[#495057] mb-6">{item.rocket.rocket_name}</p>
       <p className="text-[#6C757D] font-medium text-lg mb-2">Launch Status:</p>
       {launch_success ? (
