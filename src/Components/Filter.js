@@ -17,7 +17,6 @@ const Filter = () => {
   const handleStatusChange = (event) => {
     if (event.target.value) {
       setUpcoming(!upcoming);
-
       setFilterStatus({ ...filterStatus, upcomingStatus: upcoming });
     }
   };
@@ -26,13 +25,11 @@ const Filter = () => {
 
     if (status === "Success") {
       setLunch(true);
-
       setFilterStatus({ ...filterStatus, lnuchStatus: true });
       //   console.log(filterStatus);
     }
     if (status === "Failed") {
       setLunch(false);
-
       setFilterStatus({ ...filterStatus, lnuchStatus: false });
       //   console.log(filterStatus);
     }
